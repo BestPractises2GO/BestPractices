@@ -2,12 +2,14 @@ package de.fred.bestpractices.ui.main
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
+import de.fred.bestpractices.domain.TestInteractorImpl
 import de.fred.bestpractices.ui.base.BaseViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
 class MainFragmentViewModel : BaseViewModel(){
+
 
     val exampleText = MutableLiveData<String>().apply { value = "test" }
 

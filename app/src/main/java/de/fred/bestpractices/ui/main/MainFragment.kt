@@ -10,6 +10,7 @@ import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 import de.fred.bestpractices.databinding.MainFragmentBinding
 import kotlinx.android.synthetic.main.main_fragment.*
+import org.koin.android.ext.android.getKoin
 import org.koin.android.ext.android.inject
 
 
@@ -26,6 +27,7 @@ class MainFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        getKoin().setProperty("test", "testest2")
 
         viewModel.init()
         viewpager.adapter = fragmentManager?.let { ViewPagerAdapter(it, lifecycle) }
