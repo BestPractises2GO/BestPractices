@@ -4,6 +4,7 @@ object Dependencies{
     val kotlin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.kotlin}"
     val lifecycle_extensions = "androidx.lifecycle:lifecycle-extensions:${Versions.lifecycle}"
     val lifecycle_compiler = "androidx.lifecycle:lifecycle-common-java8:${Versions.lifecycle}"
+    val viewmodel_scope =    "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.lifecycle}"
     val lifecycle_testing = "androidx.arch.core:core-testing:${Versions.lifecycle_test}"
 
     val koin_core = "org.koin:koin-core:${Versions.koin}"

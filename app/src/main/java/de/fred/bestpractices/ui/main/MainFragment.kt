@@ -6,7 +6,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 import de.fred.bestpractices.databinding.MainFragmentBinding
 import kotlinx.android.synthetic.main.main_fragment.*
@@ -29,7 +28,7 @@ class MainFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         getKoin().setProperty("test", "testest2")
 
-        viewModel.init()
+        viewModel.initialize()
         viewpager.adapter = fragmentManager?.let { ViewPagerAdapter(it, lifecycle) }
 
         TabLayoutMediator(tabs, viewpager,
